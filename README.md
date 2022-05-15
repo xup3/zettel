@@ -18,6 +18,27 @@ zettel "This is my recognizable headline"
 This will currently create a folder with the date of the day executing it, then it will go ahead an create a an Markdown file with your title and the filename as a quote.
 The filename itself gets put together from the current date and time so you basically have a unique filename.
 
+It will look somewhat like this.
+
+```bash
+zettelkasten ➜ main —
+➜ tree
+.
+├── 20220515
+│   ├── 20220515102051.md
+│   ├── 20220515102554.md
+│   ├── 20220515104541.md
+│   ├── 20220515105145.md
+│   ├── 20220515112508.md
+│   ├── 20220515120139.md
+│   ├── 20220515121249.md
+│   ├── 20220515122152.md
+│   └── 20220515132402.md
+└── README.md
+
+1 directory, 10 files
+```
+
 ## Credits / Recognition
 
 The main idea came from the 2022 SKILSTACK Beginner boost by [@rwxrob](https://github.com/rwxrob).
