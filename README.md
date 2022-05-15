@@ -57,8 +57,9 @@ zettelkasten ➜ main —
 The main idea came from the 2022 SKILSTACK Beginner boost by [@rwxrob](https://github.com/rwxrob).
 All credits to him. Thank you for your inspirational personality.
 
-You can check his channels out here:
+You can check out his channels here:
 https://www.youtube.com/watch?v=T2D3uO3oEM8 (2022 SKILSTACK Beginner boost - Week 1)
 
 https://www.twitch.tv/rwxrob
 https://www.youtube.com/c/rwxrob
+
