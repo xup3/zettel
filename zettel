@@ -1,21 +1,28 @@
 #!/bin/bash
 
-zettel_folder="~/zettelkasten"
+zettel_folder="/Users/$USER/zettelkasten"
 timestamp_zettel=`date +%Y%m%d%H%M%S`
 timestamp_today=`date +%Y%m%d`
+
+zettel_path="$zettel_folder/$timestamp_today/$timestamp_zettel.md"
+echo $zettel_path
 
 headline="# $1"
 quote="> $timestamp_zettel"
 
 mkdir -p $timestamp_today
+mkdir -p $zettel_folder
 
-printf "%s\n" "$headline" "$quote" > "$timestamp_today/$timestamp_zettel.md"
+printf "%s\n" "$headline" "$quote" > $zettel_path 
 
-vim "$timestamp_today/$timestamp_zettel.md"
+vim $zettel_path
 
 echo $timestamp_zettel
 
+current_folder=`pwd`
+cd $zettel_folder
 git add "$timestamp_today/$timestamp_zettel.md"
 git commit -m "Add $timestamp_zettel to the zettelkasten"
 git push -u origin main
+cd $current_folder
 
