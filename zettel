@@ -10,16 +10,22 @@ echo $zettel_path
 headline="# $1"
 quote="> $timestamp_zettel"
 
-mkdir -p $timestamp_today
-mkdir -p $zettel_folder
+mkdir -p "$zettel_folder/$timestamp_today"
 
-printf "%s\n" "$headline" "$quote" > $zettel_path 
+# if [ -f $zettel_path ]; then
+#     echo "Zettel already exists"
+# else
+#     echo "Creating zettel"
+#     touch $zettel_path
+#     echo $headline >> $zettel_path
+#     echo $quote >> $zettel_path
+#     echo "" >> $zettel_path
+# fi
+
+printf "%s\n" "$headline" "$quote" > $zettel_path
 
 vim $zettel_path
 
-echo $timestamp_zettel
-
-current_folder=`pwd`
 cd $zettel_folder
 git add "$timestamp_today/$timestamp_zettel.md"
 git commit -m "Add $timestamp_zettel to the zettelkasten"
