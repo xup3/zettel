@@ -34,7 +34,6 @@ The filename itself gets put together from the current date and time so you basi
 It will look somewhat like this.
 
 ```bash
-zettelkasten ➜ main —
 ➜ tree
 .
 ├── 20220515
